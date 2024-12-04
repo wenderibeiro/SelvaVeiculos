@@ -1,0 +1,629 @@
+/* Resetando alguns estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    min-height: 100vh; /* Garante que o corpo ocupe toda a altura da tela */
+    padding-bottom: 80px; /* Espaço para o rodapé não sobrepor o conteúdo */
+}
+
+/* Menu de navegação */
+header {
+    background-color: #ff6600; /* Cor laranja */
+    padding: 10px 10px; /* Aumentei o padding para dar mais espaço */
+    width: 100%;
+    text-align: center;
+    position: relative; /* Para controlar a posição do login e cadastro */
+}
+
+nav ul {
+    list-style: none;
+    display: inline-block;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Amarelo claro ao passar o mouse */
+}
+
+/* Alinhar Login e Cadastro no canto superior direito */
+nav ul .login-cadastro {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column; /* Coloca os links um abaixo do outro */
+}
+
+nav ul .login-cadastro a {
+    margin-left: 15px;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px; /* Espaço entre o Login e o Cadastre-se */
+}
+
+nav ul .login-cadastro a:hover {
+    color: #ffcc00;
+}
+
+/* Centralização do container dos carros */
+.carros-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo individual para cada carro */
+.carro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px; /* Define um tamanho fixo para os carros */
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.carro img {
+    width: 100%; /* Faz a imagem ocupar toda a largura do bloco */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px; /* Espaço entre a imagem e o texto */
+}
+
+.carro h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px; /* Espaço entre o título e o texto */
+}
+
+.carro p {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Banner rotativo */
+.banner {
+    background-color: #ff6600; /* Cor laranja */
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto; /* Espaço acima e abaixo do banner */
+    border-radius: 10px;
+}
+
+.banner-container {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner-item {
+    display: inline-block;
+    width: 100%;
+    background-color: #ffffff;
+    color: #333;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    margin: 0 10px;
+    transform: scale(0.9);
+    animation: slide 10s infinite;
+}
+
+/* Animação de deslizar */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(100%); }
+    66% { transform: translateX(100%); }
+    100% { transform: translateX(0); }
+}
+
+/* Rodapé */
+footer {
+    background-color: #ff6600; /* Cor laranja */
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    width: 45%;
+}
+
+.footer-section h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin: 10px 0;
+}
+
+.footer-section ul li i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease; /* Adicionando transição */
+}
+
+.footer-section ul li a:hover,
+.footer-section ul li a:focus {
+    color: #ffcc00;
+}
+
+/* Barra divisória */
+.footer-divider {
+    border-left: 2px solid #ffffff;
+    height: 100%;
+    margin: 0 20px;
+}
+
+/* Estilo para os ícones no rodapé */
+.fas, .fab {
+    font-size: 20px;
+    color: #ffcc00; /* Laranja claro para os ícones */
+    transition: color 0.3s ease; /* Adicionando transição */
+}
+
+.fas:hover, .fab:hover {
+    color: #ffffff; /* Ícones brancos ao passar o mouse */
+}
+
+/* Estilo para a página de Pagamento */
+.pagamento {
+    background-color: #ffffff;
+    padding: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.pagamento h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilizando as seções "Selecionar o carro" e "Forma de pagamento" lado a lado */
+.pagamento-secao {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.pagamento-secao div {
+    flex: 1;
+    margin: 0 10px;
+    min-width: 200px;
+    text-align: left;
+}
+
+.pagamento-secao div label {
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.pagamento-secao div select,
+.pagamento-secao div input {
+    padding: 10px;
+    margin-top: 5px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.pagamento-secao div select:focus,
+.pagamento-secao div input:focus {
+    outline: none;
+    border-color: #ff6600; /* Cor laranja quando em foco */
+}
+
+/* Seção "Finalizar pagamento" igual às outras seções */
+.pagamento-finalizar {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pagamento-finalizar h3 {
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.pagamento-finalizar button {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.pagamento-finalizar button:hover {
+    background-color: #ffcc00;
+}
+
+.retirada {
+    background-color: #ffffff;
+    padding: 10px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.retirada form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.retirada label {
+    margin-top: 10px;
+}
+
+.retirada input {
+    padding: 10px;
+    margin-top: 5px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.retirada button {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.retirada button:hover {
+    background-color: #ffcc00;
+}
+
+#resultRetirada {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+/* Ajustando estilo da página de pagamento */
+.pagamento {
+    background-color: #ffffff;
+    padding: 40px;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Títulos da página */
+.pagamento h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo das seções "Selecionar carro", "Forma de pagamento" e "Finalizar pagamento" */
+.pagamento-secao {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* Seção "Selecionar carro" e "Forma de pagamento" lado a lado */
+.pagamento-secao div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.pagamento-secao div label {
+    font-size: 16px;
+    color: #333;
+}
+
+.pagamento-secao div select,
+.pagamento-secao div input {
+    padding: 12px;
+    margin-top: 5px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.pagamento-secao div select:focus,
+.pagamento-secao div input:focus {
+    outline: none;
+    border-color: #ff6600; /* Cor laranja ao focar */
+}
+
+/* Estilo para "Finalizar pagamento" */
+.pagamento-finalizar {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    text-align: left;
+}
+
+.pagamento-finalizar h3 {
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.pagamento-finalizar .adicionais {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.pagamento-finalizar .adicionais label {
+    font-size: 16px;
+    color: #333;
+}
+
+.pagamento-finalizar .adicionais input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.pagamento-finalizar .adicionais input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Estilo para botões de opções */
+.pagamento-finalizar button {
+    background-color: #ff6600;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 18px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.pagamento-finalizar button:hover {
+    background-color: #ffcc00;
+}
+
+/* Adicionais e pacotes de proteção */
+.pacotes-protecao {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.pacotes-protecao .item-pacote {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    background-color: #f9f9f9;
+}
+
+.pacotes-protecao .item-pacote label {
+    font-weight: bold;
+    color: #333;
+}
+
+.pacotes-protecao .item-pacote input {
+    margin-top: 5px;
+}
+
+/* Estilos para o novo Dados Pessoais */
+
+.dados-pessoais h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.dados-pessoais-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #ffcc00;
+}
+
+/* Conclusão da Compra */
+.conclusao-compra {
+    padding: 100px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.conclusao-compra .container h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.conclusao-compra .container p {
+    font-size: 18px;
+}
+
+/* Formulário de Avaliação */
+.formulario-avaliacao {
+    background-color: white;
+    padding: 40px 20px;
+    margin-top: 40px;
+}
+
+.formulario-avaliacao .container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.formulario-avaliacao .form-group {
+    margin-bottom: 20px;
+}
+
+.formulario-avaliacao label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.formulario-avaliacao input[type="text"],
+.formulario-avaliacao input[type="email"],
+.formulario-avaliacao input[type="tel"],
+.formulario-avaliacao textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.formulario-avaliacao textarea {
+    resize: vertical;
+}
+
+.formulario-avaliacao .avaliacao-icones {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.formulario-avaliacao .avaliacao-icones label {
+    display: inline-block;
+    text-align: center;
+}
+
+.formulario-avaliacao .avaliacao-icones img {
+    width: 40px;
+    height: 40px;
+}
+
+.formulario-avaliacao .button {
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.formulario-avaliacao .button:hover {
+    background-color: #ffcc00;
+}

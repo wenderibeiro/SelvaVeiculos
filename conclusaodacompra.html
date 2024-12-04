@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locadora de Carros</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Adicionando FontAwesome para ícones -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Menu de navegação -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Menu</a></li>
+        <li><a href="login.html">Login de acesso</a></li>
+        <li><a href="agenderetirada.html">Agende sua Retirada</a></li>
+        <li><a href="pagamento.html">Pagamento</a></li>
+      </ul>
+    </nav>
+
+        <!-- Conclusão da Compra -->
+    <section class="conclusao-compra">
+        <div class="container">
+            <h1>Obrigado pela sua compra!</h1>
+            <p>Agora que sua compra foi concluída, gostaríamos de saber como foi sua experiência.</p>
+        </div>
+    </section>
+
+    <!-- Formulário de Avaliação -->
+    <section class="formulario-avaliacao">
+        <div class="container">
+            <h2>Como foi sua experiência?</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+                </div>
+                <div class="form-group">
+                    <label for="descricao">Compartilhe sua experiência:</label>
+                    <textarea id="descricao" name="descricao" rows="4" required></textarea>
+                </div>
+                <div class="form-group avaliacao">
+                    <label>Como você avaliaria sua experiência?</label>
+                    <br><br>
+                    <div class="avaliacao-icones">
+                        <label><input type="radio" name="avaliacao" value="Muito Satisfeito" required> <img src="img/muitosatisfeito.jpg" alt="Muito Satisfeito"></label>
+                        <label><input type="radio" name="avaliacao" value="Satisfeito" required> <img src="img/satisfeito.jpg" alt="Satisfeito"></label>
+                        <label><input type="radio" name="avaliacao" value="Bom" required> <img src="img/bom.jpg" alt="Bom"></label>
+                        <label><input type="radio" name="avaliacao" value="Insatisfeito" required> <img src="img/insatisfeito.jpg" alt="Insatisfeito"></label>
+                        <label><input type="radio" name="avaliacao" value="Muito Insatisfeito" required> <img src="img/muitoinsatisfeito.jpg" alt="Muito Insatisfeito"></label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="button">Enviar Avaliação</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+  <footer>
+    <div class="footer-container">
+      <!-- Para Você -->
+      <div class="footer-section">
+        <h3>Para Você</h3>
+        <ul>
+          <li><i class="fas fa-calendar-alt"></i> <a href="#">Reservas</a></li>
+          <li><i class="fas fa-map-marker-alt"></i> <a href="#">Ponto de Retirada</a></li>
+          <li><i class="fas fa-user-plus"></i> <a href="#">Cadastre-se</a></li>
+        </ul>
+      </div>
+      <!-- Barra Divisória -->
+      <div class="footer-divider"></div>
+      <!-- Contato -->
+      <div class="footer-section">
+        <h3>Contato</h3>
+        <ul>
+          <li><i class="fas fa-comment-dots"></i> <a href="#">Envie uma mensagem</a></li>
+          <li><i class="fas fa-question-circle"></i> <a href="#">Perguntas frequentes</a></li>
+          <li><i class="fas fa-phone-alt"></i> <a href="#">Reserve pelo telefone (0800...)</a></li>
+          <li><i class="fab fa-whatsapp"></i> <a href="#">Assistência pelo Whatsapp (0800...)</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

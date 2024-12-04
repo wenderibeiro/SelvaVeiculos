@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Adicionando FontAwesome para ícones -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <!-- Menu de navegação pode ser adicionado aqui -->
+        </nav>
+    </header>
+    <br><br>
+    <div class="container">
+        <h1>Cadastro de Usuário</h1>
+        <br><br>
+
+        <form class="cadastro-form" action="escolhaocarro.html" method="POST">
+            <div class="input-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Seu email">
+            </div>
+
+            <div class="input-group">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" required placeholder="Sua senha">
+            </div>
+
+            <div class="input-group">
+                <label for="confirmar_senha">Confirmar Senha</label>
+                <input type="password" id="confirmar_senha" name="confirmar_senha" required placeholder="Confirmar senha">
+            </div>
+
+            <!-- Termos de Uso e Proteção de Dados -->
+            <div class="termos-container">
+                <div class="termos">
+                    <input type="checkbox" id="termos" name="termos" required>
+                    <label for="termos">Eu aceito os <a href="termos_de_uso.html">Termos de Uso</a> e a <a href="politica_de_privacidade.html">Política de Privacidade</a>.</label>
+                </div>
+            </div>
+
+            <form action="escolhaocarro.html" method="get">
+                <button type="submit">Cadastrar</button>
+            </form>
+        </form>
+    </div>
+
+   <!-- Rodapé -->
+  <footer>
+    <div class="footer-container">
+      <!-- Para Você -->
+      <div class="footer-section">
+        <h3>Para Você</h3>
+        <ul>
+          <li><i class="fas fa-calendar-alt"></i> <a href="#">Reservas</a></li>
+          <li><i class="fas fa-map-marker-alt"></i> <a href="#">Ponto de Retirada</a></li>
+          <li><i class="fas fa-user-plus"></i> <a href="#">Cadastre-se</a></li>
+        </ul>
+      </div>
+      <!-- Barra Divisória -->
+      <div class="footer-divider"></div>
+      <!-- Contato -->
+      <div class="footer-section">
+        <h3>Contato</h3>
+        <ul>
+          <li><i class="fas fa-comment-dots"></i> <a href="#">Envie uma mensagem</a></li>
+          <li><i class="fas fa-question-circle"></i> <a href="#">Perguntas frequentes</a></li>
+          <li><i class="fas fa-phone-alt"></i> <a href="#">Reserve pelo telefone (0800...)</a></li>
+          <li><i class="fab fa-whatsapp"></i> <a href="#">Assistência pelo Whatsapp (0800...)</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
